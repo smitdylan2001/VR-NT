@@ -8,7 +8,7 @@ public class Clock : MonoBehaviour
     public int Times { get; private set; }
     private bool _canIncreaseTimes;
 
-    void Start()
+    private void Start()
     {
         _rotatePoint = GameObject.Find("Rotatepoint");
         _clockPointer = GameObject.Find("Pointer");
@@ -16,20 +16,20 @@ public class Clock : MonoBehaviour
         _canIncreaseTimes = false;
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         Rotate();
 
         TrackTime();
     }
 
-    void Rotate()
+    private void Rotate()
 	{
         _clockPointer.transform.RotateAround(_rotatePoint.transform.position, Vector3.back, Time.fixedDeltaTime * 25);
 
     }
 
-    void TrackTime()
+    private void TrackTime()
 	{
         if (_clockPointer.transform.localRotation.eulerAngles.y > 0 && _clockPointer.transform.localRotation.eulerAngles.y < 30 && _canIncreaseTimes)
         {
