@@ -14,8 +14,8 @@ public class TimeTest : MonoBehaviour
 
     private void Start()
     {
-        _leftController = GameObject.Find("LeftControllerAnchor");
-        _rightController = GameObject.Find("RightControllerAnchor");
+        _leftController = GameObject.Find("LeftHand");
+        _rightController = GameObject.Find("RightHand");
         _rightPosition = _rightController.transform.position;
         _leftPosition = _leftController.transform.position;
 
@@ -35,6 +35,5 @@ public class TimeTest : MonoBehaviour
 
         Time.timeScale = Mathf.Lerp(Time.timeScale, 1 - (_motion * 30), 0.05f);
         Time.fixedDeltaTime = Time.timeScale * 0.02f;
-        
     }
 }
