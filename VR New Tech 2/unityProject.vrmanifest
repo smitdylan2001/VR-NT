@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.newtech2.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "C:\\Users\\dylan\\Documents\\Unity\\New Tech 2\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "C:\\Users\\dylan\\Documents\\Unity\\VR-NewTech\\VR New Tech 2\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
           "name": "New Tech 2 [Testing]"
