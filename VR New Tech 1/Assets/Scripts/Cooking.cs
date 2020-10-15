@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class Cooking : MonoBehaviour
 {
+	int done = 0;
+
 	private void OnTriggerEnter(Collider collider)
 	{
 		ICookable food = collider.gameObject.GetComponent(typeof(ICookable)) as ICookable;
+		done++;
+		collider.gameObject.SetActive(false);
 
-		Cook(food);
+		Cook(food, collider);
 	}
 
-    private IEnumerator Cook(ICookable food)
+    private IEnumerator Cook(ICookable food, Collider collider)
 	{
 		Debug.Log("raw");
 		yield return new WaitForSeconds(food.CookTime / 4);
